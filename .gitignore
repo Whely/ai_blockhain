@@ -4,6 +4,10 @@ env/
 # Python
 __pycache__/
 *.pyc
+.pytest_cache/
+data/
+checkpoints/
+*.safetensors
 dev-ignore/
 report.md
 eval_bundle/

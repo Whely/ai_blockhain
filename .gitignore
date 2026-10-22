@@ -1,0 +1,25 @@
+venv/
+.venv/
+env/
+# Python
+__pycache__/
+*.pyc
+dev-ignore/
+report.md
+eval_bundle/
+*.egg-info/
+dist/
+build/
+*.py[cod]
+# Secrets
+
+.env
+.env.*
+# Local setup
+CLAUDE.md
+# redactors
+.vscode/
+.idea/
+*.sublime-workspace
+Thumbs.db
+Desktop.ini

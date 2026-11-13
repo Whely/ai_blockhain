@@ -21,8 +21,10 @@ formulas, staking, slashing, and the attacks that try to break them.
 
 ## Status
 
-Early development: repository skeleton only, no working code yet. Stages are built one
-at a time, each ending in a runnable result and a commit.
+Early development. Working today: the model and training loop, deterministic data
+pools, weight hashing, a baseline MNIST run (92.9% on public validation, 93.4% on the
+hidden test set) and the mining reward formula with its tests. Stages are built one at
+a time, each ending in a runnable result and a commit.
 
 Rough order: data and model → training rounds with several miners (FedAvg) →
 adversarial miners and reward hardening → data providers → toy blockchain →
@@ -37,6 +39,18 @@ sim/         honest and adversarial participant scenarios
 dashboard/   Streamlit dashboard
 tests/       pytest
 docs/        diagrams, threat model, notes
+```
+
+## Quick start
+
+CPU only; no GPU is required to run the tests or the baseline.
+
+```bash
+python -m venv venv
+source venv/Scripts/activate           # Windows: venv\Scripts\activate
+pip install -r requirements.txt        # wheels come from the PyTorch CPU index
+python -m pytest -q
+python -m scripts.train_baseline --epochs 2
 ```
 
 ## How verification works
